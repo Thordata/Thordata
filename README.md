@@ -1,36 +1,37 @@
-<h2 align="center">
-  Welcome to Thordata GitHub🧠
-</h2>
+# ⚡ Thordata: Infrastructure for AI Agents & Enterprise Data Collection
 
-* Easy Access to Web Data at Scale, Perfect for AI • [thordata.com](https://www.thordata.com/)
+<h4 align="center">
+  🌐 The Premium Proxy Network built for High-Volume, Low-Latency AI & Data Workloads.
+</h4>
 
 ---
 <p align="center">
    <a href="https://www.thordata.com/">
-  <img src="https://github.com/Thordata/Test-Img/raw/main/test-img/728%20x%2090%20(2).gif" alt="Thordata Logo" /></a>
-</p
+  <img src="./assets/728 x 90 (2).gif" alt="Thordata Logo" /></a>
+</p>
 
-## 🚀 Core Open‑Source Projects
-| Project | Description | Link |
-|--------|-------------|------|
-| **thordata‑sdk‑python** | Python client, REST wrapper | [→](https://github.com/Thordata/thordata-sdk-python) |
-| **workshop‑frac‑scraping** | Tutorial & workshop code | [→](https://github.com/Thordata/workshop-frac-scraping) |
+## 🚀 Core Open‑Source Projects & AI Tools
+
+| Project | Status | Description | Link |
+| :--- | :--- | :--- | :--- |
+| **thordata-python-sdk** | 🚧 WIP | The official Python client for all services. Focus on Async & high concurrency. | [→ Coming Soon] |
+| **thordata-mcp-starter** | 💡 Idea | Model Context Protocol (MCP) server for instant LLM web access. | [→ Idea Stage] |
+| **workshop-ai-data-prep** | 📚 Demo | Tutorials on data preparation (e.g., HTML to Markdown for RAG). | [→ Coming Soon] |
 
 ## 🧰 SDKs & Integrations
-- **sdk‑java** – Java bindings & client
-- **thordata‑cli** – Command‑line helper tools(Test)
 
-## 📚 Tutorials & Guides
-- `web‑scraping‑with‑thordata` – Quick start for data scraping
-- `bio‑scraper‑examples` – Biological data scraping examples
+- **SDK-Java** – Java bindings & client for large-scale enterprise use.
+- **thordata-cli** – Command-line tools for testing proxy quality and latency (Geek-friendly DX).
 
-## 👩‍💻 Contribute & Community
-Pull requests, issues, code ✔️ always welcome!  
-Check [CONTRIBUTING.md](./CONTRIBUTING.md) & join our GitHub Discussions → enabled in all repos.
+## 📚 Tutorials & Community
 
-## 📩 Support
-Email us at support@thordata.com · Slide into our Chat  
-View full docs: [Thordata Docs](https://doc.thordata.com/doc)
+- **web-scraping-quickstart** – Quick start guides for integration with Scrapy, Puppeteer, etc.
+- **github/discussions** – Join our community discussions for technical Q&A.
 
 ---
-_Last updated: July 28, 2025_
+## 📩 Support & Documentation
+
+Email us at `support@thordata.com` · View full docs: [Thordata Docs](https://doc.thordata.com/doc)
+
+---
+_Last updated: **[11/22/2025]**_
