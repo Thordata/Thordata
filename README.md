@@ -52,6 +52,8 @@ All proxies are exposed via a simple HTTP/HTTPS gateway.
 |-----------|-------------|
 | **[thordata-python-sdk](https://github.com/Thordata/thordata-python-sdk)** | Official Python SDK for Thordata proxies & scraping APIs. Supports sync/async, SERP, Universal, and Web Scraper APIs. |
 | **[thordata-cookbook](https://github.com/Thordata/thordata-cookbook)** | Real-world recipes: RAG pipelines, MCP server for LLMs, GitHub intelligence, app store reviews, and more. |
+| **[thordata-proxy-examples](https://github.com/Thordata/thordata-proxy-examples)** | Minimal Python & curl examples for using Thordata's proxy gateway (IP check, basic geo targeting, concurrent requests). |
+| **[google-news-scraper](https://github.com/Thordata/google-news-scraper)** | Full Google News scraper using Thordata SERP API (`engine=google_news`), supporting `q`, `gl`, `hl` and advanced tokens, exportable to CSV. |
 
 More language SDKs (Node.js, Go) are planned.
 
