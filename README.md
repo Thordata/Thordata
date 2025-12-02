@@ -97,6 +97,9 @@ and model tool ecosystems.
   - `ThordataSerpTool` — real‑time web search via SERP API  
   - `ThordataScrapeTool` — universal single‑page scraping with optional JS rendering
 
+- **[thordata-web-qa-agent](https://github.com/Thordata/thordata-web-qa-agent)**  
+  CLI Web Q&A agent: question → Thordata SERP → Universal Scraper → HTML cleaning → OpenAI answer.
+
 ---
 
 ## 🌍 Proxy & Network Examples
@@ -123,6 +126,10 @@ SERP‑based examples focused on Google and news use cases.
   - `q` (query), `hl` (language), `gl` (country)
   - `topic_token`, `publication_token`, `section_token`, `story_token`, `so`
   - CSV export of structured news results via Thordata SERP API
+
+- **[google-play-reviews-rag](https://github.com/Thordata/google-play-reviews-rag)**  
+  Google Play app reviews analysis + RAG: fetch reviews via Thordata Web Scraper,
+  build an embeddings index, and answer questions about user sentiment.
 
 > **Planned:**
 > - Generic Google web search examples (`engine=google`)  
