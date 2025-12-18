@@ -199,7 +199,7 @@ results = client.serp_search(
     engine=Engine.GOOGLE,
     num=5,
     # Pass engine‑specific params via **kwargs, e.g.:
-    # type="news", location="United States"
+    # engine="google_news", location="United States"
 )
 
 print("Organic results:", len(results.get("organic", [])))
@@ -211,7 +211,7 @@ print("Organic results:", len(results.get("organic", [])))
 html = client.universal_scrape(
     url="https://www.thordata.com",
     js_render=True,
-    output_format="HTML",
+    output_format="html",
 )
 print(html[:500])
 ```
