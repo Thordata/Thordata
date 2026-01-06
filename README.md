@@ -19,151 +19,89 @@
 
 ---
 
-## 🧩 Product Overview
+## 🚀 Official SDKs
 
-Thordata provides a full‑stack web data platform:
+We provide enterprise-grade, spec-compliant SDKs for major languages. All SDKs support:
+*   **Proxy Generation**: Residential, Mobile, Datacenter, ISP with geo-targeting.
+*   **SERP API**: Real-time search results (Google, Bing, Yandex).
+*   **Web Unlocker**: Universal scraping with antibot bypass.
+*   **Web Scraper API**: Async task management for large-scale crawling.
+
+| Language | Package | Version | Features | Links |
+| :--- | :--- | :--- | :--- | :--- |
+| **Python** | `thordata-sdk` | v1.1.0+ | Sync/Async, Connection Pooling | [![PyPI](https://img.shields.io/pypi/v/thordata-sdk?style=flat-square)](https://github.com/Thordata/thordata-python-sdk) |
+| **Node.js** | `thordata-js-sdk` | v1.1.0+ | TypeScript, Proxy Agent | [![NPM](https://img.shields.io/npm/v/thordata-js-sdk?style=flat-square)](https://github.com/Thordata/thordata-js-sdk) |
+| **Go** | `thordata-go-sdk` | v1.1.0+ | Generics, High Performance | [![Go Reference](https://pkg.go.dev/badge/github.com/Thordata/thordata-go-sdk.svg)](https://github.com/Thordata/thordata-go-sdk) |
+| **Java** | `thordata-java-sdk` | v1.1.0+ | OkHttp, Maven Central | [![Maven](https://img.shields.io/maven-central/v/com.thordata/thordata-java-sdk?style=flat-square)](https://github.com/Thordata/thordata-java-sdk) |
+
+---
+
+## 🧩 Product Overview
 
 ### 1. Proxy Network (Core)
 
-| Product | Description |
-|---------|-------------|
-| Residential Proxy | City‑level IP rotation for difficult targets. |
-| Mobile Proxy | 4G/5G carrier IPs for mobile‑only experiences. |
-| Static ISP Proxy | Static, ISP‑grade IPs with high trust. |
-| Datacenter Proxy | High‑bandwidth IPs for bulk crawling. |
-| Datacenter ISP Proxy | Blended ISP + DC routes for performance & trust. |
-
-All proxies are exposed via a simple HTTP/HTTPS gateway.
+| Product              | Description                                         | Port |
+|----------------------|-----------------------------------------------------|------|
+| **Residential**      | 90M+ IPs, City-level targeting, rotating/sticky.    | 9999 |
+| **Mobile**           | 4G/5G carrier IPs for mobile-first scraping.        | 5555 |
+| **Datacenter**       | High-speed IPs for bulk data collection.            | 7777 |
+| **Static ISP**       | Stable, long-term IPs with high trust scores.       | 6666 |
 
 ### 2. Scraping APIs
 
-| API | Description |
-|-----|-------------|
-| SERP API | Real‑time Google/Bing/Yandex/DuckDuckGo search results with rich options. |
-| Universal Scraper | JS‑rendered HTML/PNG from any URL, bypassing antibot systems. |
-| Web Scraper API | Task‑based scraping using pre‑built spiders from the Web Scraper Store. |
-
-### 3. Data Layer (In Progress)
-
-| Product | Description |
-|---------|-------------|
-| Datasets | Ready‑to‑use web datasets for AI training and analytics. |
-| Integrations | RAG pipelines, vector databases, MCP toolchains, and more. |
+| API                | Capability                                                                 |
+|--------------------|----------------------------------------------------------------------------|
+| **SERP API**       | Real-time search results from Google, Bing, Yandex, DuckDuckGo.            |
+| **Universal API**  | JS-rendered HTML/PNG from any URL, automatically bypassing CAPTCHAs.       |
+| **Web Scraper API**| Task-based asynchronous scraping (Text & Video/Audio) for massive scale.   |
 
 ---
 
-## ⚙️ Official SDKs
-
-We provide official, spec-compliant SDKs for all major languages. All SDKs support Proxy generation, SERP, Universal API, and Task management.
-
-| Language | Package | Version | Status |
-|----------|---------|---------|--------|
-| Python | thordata-sdk | v1.0.1+ | 🟢 Stable |
-| Node.js | thordata-js-sdk | v1.0.1+ | 🟢 Stable |
-| Go | thordata-go-sdk | v1.0.1+ | 🟢 Stable |
-| Java | thordata-java-sdk | v1.0.1+ | 🟢 Stable |
-
-Each SDK includes built-in retry logic, connection pooling (where applicable), and strict type hints.
-
----
-
-## 🤖 AI & LLM Integrations
-
-Tools and examples that connect Thordata with AI agents, RAG pipelines, and model tool ecosystems.
-
-### thordata-cookbook
-
-A collection of end‑to‑end recipes:
-
-- RAG data pipeline with Universal Scraper → HTML cleaning → Markdown
-- Web QA Agent: question → SERP search → page scraping → LLM answer
-- MCP tools: expose search_web, search_news, read_website, extract_links to LLMs
-- GitHub repository intelligence and app‑store review analysis
-
-### thordata-langchain-tools
-
-LangChain tools powered by Thordata:
-
-- **ThordataSerpTool** — real‑time web search via SERP API
-- **ThordataScrapeTool** — universal single‑page scraping with optional JS rendering
-
-### thordata-web-qa-agent
-
-CLI Web Q&A agent: question → Thordata SERP → Universal Scraper → HTML cleaning → OpenAI answer.
-
----
-
-## 🚀 Quick Start (Python)
-
-Install the SDK:
-
-```bash
-pip install thordata-sdk
-```
-
-### 1. Initialize the client
+## 🛠️ Quick Start (Python Example)
 
 ```python
-from thordata import ThordataClient
+# pip install thordata-sdk
+from thordata import ThordataClient, ProxyConfig, ProxyProduct, Engine
 
-client = ThordataClient(
-    scraper_token="YOUR_SCRAPER_TOKEN",
-    public_token="YOUR_PUBLIC_TOKEN",
-    public_key="YOUR_PUBLIC_KEY",
+# 1. Initialize
+client = ThordataClient(scraper_token="YOUR_TOKEN")
+
+# 2. Use Proxy Network (High Performance)
+# SDK handles connection pooling automatically
+proxy = ProxyConfig(
+    username="user", password="pass",
+    product=ProxyProduct.RESIDENTIAL,
+    country="us",
+    city="new_york"
 )
-```
+resp = client.get("https://httpbin.org/ip", proxy_config=proxy)
+print(resp.json())
 
-### 2. Send a request via the proxy network
+# 3. SERP Search
+results = client.serp_search("Thordata SDK", engine=Engine.GOOGLE)
+print(results["organic"][0]["link"])
 
-```python
-resp = client.get("http://httpbin.org/ip")
-print(resp.json())  # → see your Thordata exit IP
-```
-
-### 3. Run a SERP search
-
-```python
-from thordata import Engine
-
-results = client.serp_search(
-    query="Thordata proxy network",
-    engine=Engine.GOOGLE,
-    num=5,
-)
-
-print("Organic results:", len(results.get("organic", [])))
-```
-
-### 4. Universal Scraper (HTML)
-
-```python
-html = client.universal_scrape(
-    url="https://www.thordata.com",
-    js_render=True,
-    output_format="html",
-)
-
-print(html[:500])
+# 4. Universal Scrape (Web Unlocker)
+html = client.universal_scrape("https://example.com", js_render=True)
 ```
 
 ---
 
-## 🤝 Community & Support
+## 📚 Ecosystem
 
-| Resource | Link |
-|----------|------|
-| Dashboard | https://dashboard.thordata.com/ |
-| Docs | https://doc.thordata.com |
-| Support | support@thordata.com |
-
-If you are building something interesting on top of Thordata (RAG pipelines, AI agents, dashboards), feel free to open an issue and share your project — we are happy to feature selected community examples.
+- **[thordata-sdk-spec](https://github.com/Thordata/thordata-sdk-spec)**: The canonical specification for all SDKs.
+- **[API Reference](https://thordata.github.io/thordata-sdk-spec/)**: Auto-generated API documentation.
+- **[Mock Server](https://github.com/Thordata/thordata-sdk-spec/pkgs/container/thordata-sdk-spec%2Fmock-server)**: Dockerized mock server for offline development.
 
 ---
+
+## 🤝 Support
+
+- **Official website:** https://www.thordata.com/
+- **Dashboard:** https://dashboard.thordata.com/
+- **Docs:** https://doc.thordata.com
+- **Email:** support@thordata.com
 
 <p align="center">
-  <i>Thordata powers the proxy network and web data pipelines behind modern AI.</i>
-</p>
-
-<p align="center">
-  <sub>Last updated: <b>2026‑01‑05</b></sub>
+  <sub>Last updated: <b>2026-01-06</b></sub>
 </p>
