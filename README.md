@@ -51,8 +51,8 @@ Native protocols to connect Thordata with the modern AI stack.
 | Repository | Protocol | Description | Status |
 | :--- | :--- | :--- | :--- |
 | [**thordata-mcp-server**](https://github.com/Thordata/thordata-mcp-server) | **MCP** | 🤖 **Model Context Protocol** implementation. Connect Claude Desktop / OpenAI directly to Thordata tools. | 🔥 **NEW** |
-| [**thordata-langchain-tools**](https://github.com/Thordata/thordata-langchain-tools) | LangChain | 🦜🔗 Official LangChain Tool definitions. Give your Agents "Browsing" capabilities. | 🟢 Stable |
-| [**thordata-rag-pipeline**](https://github.com/Thordata/thordata-rag-pipeline) | Vector DB | 🧠 End-to-end pipeline: Scrape -> Clean -> Chunk -> Embed. Optimized for RAG. | 🚧 Beta |
+| [**thordata-langchain-tools**](https://github.com/Thordata/thordata-langchain-tools) | LangChain | 🦜🔗 Official LangChain Tool definitions. Give your Agents "Browsing" capabilities. | 🟠 Evolving |
+| [**thordata-rag-pipeline**](https://github.com/Thordata/thordata-rag-pipeline) | Vector DB | 🧠 End-to-end pipeline: Scrape -> Clean -> Chunk -> Embed. Optimized for RAG. | 🟠 Evolving |
 
 ### 🔹 Layer 3: Solutions / SEO (Specialized Scrapers & Guides)
 Ready-to-use scraper templates and hands-on guides for high-value targets. **Batteries included.**
