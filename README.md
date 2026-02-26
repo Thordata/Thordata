@@ -12,8 +12,8 @@
   </p>
 
   <p>
-    <img src="https://img.shields.io/badge/Status-Active_Construction-yellow" alt="Status">
-    <img src="https://img.shields.io/badge/Network-60M%2B_IPs-blue" alt="Network">
+    <img src="https://img.shields.io/badge/Status-Production_Ready-brightgreen" alt="Status">
+    <img src="https://img.shields.io/badge/Network-100M%2B_IPs-blue" alt="Network">
     <img src="https://img.shields.io/badge/Uptime-99.9%25-success" alt="Uptime">
     <img src="https://img.shields.io/badge/Focus-AI_&_Scraping-purple" alt="Focus">
   </p>
@@ -21,13 +21,13 @@
 
 ---
 
-> **🚧 UNDER CONSTRUCTION**: We are currently performing a massive upgrade to our open-source ecosystem (Jan-Feb 2026). We are refactoring our SDKs to be strictly typed, adding MCP support, and releasing new AI agent templates. Stay tuned!
+> **Ecosystem Overview**: All core SDKs and flagship agents are production‑ready and fully typed. We continuously ship new integrations, example projects, and AI‑native workflows.
 
 ## 📖 About Thordata
 
 Thordata is not just a proxy provider; we are the **data layer for the AI era**. We provide the infrastructure that allows developers, data scientists, and AI agents to access public web data reliably, anonymously, and at scale.
 
-With a network of **60M+ Ethical Residential IPs** and advanced **Web Unlocking** technology, we handle the complexity of fingerprints, captchas, and retries so you can focus on the data.
+With a network of **100M+ Ethical Residential IPs** and advanced **Web Unlocking** technology, we handle the complexity of fingerprints, captchas, and retries so you can focus on the data.
 
 ---
 
@@ -41,9 +41,9 @@ The fundamental building blocks for integrating Thordata into your stack.
 | Repository | Language | Description | Status |
 | :--- | :--- | :--- | :--- |
 | [**thordata-python-sdk**](https://github.com/Thordata/thordata-python-sdk) | Python | 🐍 **Flagship SDK**. Async support, fully typed, Pandas integration. The standard for data pipelines. | 🟢 Stable |
-| [**thordata-js-sdk**](https://github.com/Thordata/thordata-js-sdk) | Node.js | 📦 **TypeScript**. Built for serverless environments and Puppeteer/Playwright control. | 🟡 Refactoring |
-| [**thordata-go-sdk**](https://github.com/Thordata/thordata-go-sdk) | Go | 🐹 **High Performance**. Designed for massive concurrency and enterprise-grade scrapers. | 🟡 Refactoring |
-| [**thordata-java-sdk**](https://github.com/Thordata/thordata-java-sdk) | Java | ☕ **Enterprise**. Thread-safe, rigid implementation for legacy banking/enterprise systems. | 🟡 Refactoring |
+| [**thordata-js-sdk**](https://github.com/Thordata/thordata-js-sdk) | Node.js | 📦 **TypeScript**. Built for serverless environments and Puppeteer/Playwright control. | 🟢 Stable |
+| [**thordata-go-sdk**](https://github.com/Thordata/thordata-go-sdk) | Go | 🐹 **High Performance**. Designed for massive concurrency and enterprise-grade scrapers. | 🟢 Stable |
+| [**thordata-java-sdk**](https://github.com/Thordata/thordata-java-sdk) | Java | ☕ **Enterprise**. Thread-safe, rigid implementation for legacy banking/enterprise systems. | 🟢 Stable |
 
 ### 🔹 Layer 2: Integrations (AI & LLM)
 Native protocols to connect Thordata with the modern AI stack.
@@ -54,15 +54,14 @@ Native protocols to connect Thordata with the modern AI stack.
 | [**thordata-langchain-tools**](https://github.com/Thordata/thordata-langchain-tools) | LangChain | 🦜🔗 Official LangChain Tool definitions. Give your Agents "Browsing" capabilities. | 🟢 Stable |
 | [**thordata-rag-pipeline**](https://github.com/Thordata/thordata-rag-pipeline) | Vector DB | 🧠 End-to-end pipeline: Scrape -> Clean -> Chunk -> Embed. Optimized for RAG. | 🚧 Beta |
 
-### 🔹 Layer 3: Solutions / SEO (Specialized Scrapers)
-Ready-to-use scraper templates for specific high-value targets. **Batteries included.**
+### 🔹 Layer 3: Solutions / SEO (Specialized Scrapers & Guides)
+Ready-to-use scraper templates and hands-on guides for high-value targets. **Batteries included.**
 
 | Repository | Target | Features |
 | :--- | :--- | :--- |
-| [**amazon-product-scraper-python**](https://github.com/Thordata/amazon-product-scraper-python) | E-commerce | Extracts Price, Rating, Reviews, Images. Handles ASINs and Search. |
-| [**google-maps-scraper-python**](https://github.com/Thordata/google-maps-scraper-python) | Local SEO | Extracts Business Info, Reviews, Lat/Long, Operating Hours. |
-| [**google-news-scraper-python**](https://github.com/Thordata/google-news-scraper-python) | Intelligence | Monitor keywords, brand mentions, and financial news in real-time. |
-| [**social-media-scraper-suite**](https://github.com/Thordata) | Social | *Coming Soon*: Unified interface for Twitter(X), LinkedIn, and Reddit data. |
+| [**apify-amazon-search-product-scraper**](https://github.com/Thordata/apify-amazon-search-product-scraper) | Amazon Search & Product | Multi‑marketplace search & product data, with rating / reviews filters and optional enrichment. |
+| [**how-to-bypass-amazon-captcha-when-scraping**](https://github.com/Thordata/how-to-bypass-amazon-captcha-when-scraping) | Anti-bot / CAPTCHA | 2026 hands‑on guide to reliably bypass Amazon CAPTCHA in scraping workflows, with free examples and a production‑ready integration using Thordata Web Scraper Tools. |
+| [**how-to-scrape-amazon-product-data-for-free**](https://github.com/Thordata/how-to-scrape-amazon-product-data-for-free) | Amazon Product | Practical tutorial on scraping Amazon product data with requests + BeautifulSoup in 2026, plus an optional upgrade path to Thordata's Amazon Scraper API. |
 
 ### 🔹 Layer 4: Agents & Apps
 Full-blown applications and demos showcasing the power of Thordata.
@@ -75,7 +74,7 @@ Full-blown applications and demos showcasing the power of Thordata.
 ### 🔹 Layer 5: Examples
 | Repository | Description |
 | :--- | :--- |
-| [**thordata-cookbook**](https://github.com/Thordata/thordata-cookbook) | 🍳 **"Copy-Paste" Recipes**. 50+ examples covering everything from Setting headers to Handling Captchas. |
+| [**thordata-proxy-examples**](https://github.com/Thordata/thordata-proxy-examples) | 🍳 **"Copy-Paste" Recipes**. End-to-end examples of proxy configuration, rotation, and Web Unlocker usage. |
 
 ---
 
@@ -83,7 +82,7 @@ Full-blown applications and demos showcasing the power of Thordata.
 
 ### 1. Proxy Network (The Foundation)
 Access the world's most stable proxy network.
-*   **Residential Proxies**: 60M+ IPs, Real devices, Ethical compliance.
+*   **Residential Proxies**: 100M+ IPs, Real devices, Ethical compliance.
 *   **Mobile Proxies**: 3G/4G/5G IPs for high-trust mobile app verification.
 *   **ISP Proxies**: Static residential IPs for keeping sessions alive.
 *   **Datacenter Proxies**: High speed, cost-effective bandwidth.
