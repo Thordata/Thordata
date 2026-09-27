@@ -6,6 +6,7 @@
   </p>
   
   <p>
+    <a href="https://www.thordata.com/?ls=github&lk=thordata">Start with Thordata</a> •
     <a href="https://www.thordata.com">🌐 Website</a> • 
     <a href="https://doc.thordata.com">📚 Documentation</a> • 
     <a href="https://dashboard.thordata.com">📊 Dashboard</a>
@@ -21,7 +22,7 @@
 
 ---
 
-> **Ecosystem Overview**: All core SDKs and flagship agents are production‑ready and fully typed. We continuously ship new integrations, example projects, and AI‑native workflows.
+> **Ecosystem Overview**: Official SDKs and AI integrations for proxy and web data workflows. We continuously ship new integrations, example projects, and AI‑native workflows.
 
 ## 📖 About Thordata
 
@@ -50,8 +51,9 @@ Native protocols to connect Thordata with the modern AI stack.
 
 | Repository | Protocol | Description | Status |
 | :--- | :--- | :--- | :--- |
-| [**thordata-mcp-server**](https://github.com/Thordata/thordata-mcp-server) | **MCP** | 🤖 **Model Context Protocol** implementation. Connect Claude Desktop / OpenAI directly to Thordata tools. | 🔥 **NEW** |
+| [**thordata-mcp**](https://github.com/Thordata/thordata-mcp) | **MCP** | 🤖 **Model Context Protocol** implementation. Connect Claude Desktop / OpenAI directly to Thordata tools. | 🔥 **NEW** |
 | [**thordata-langchain-tools**](https://github.com/Thordata/thordata-langchain-tools) | LangChain | 🦜🔗 Official LangChain Tool definitions. Give your Agents "Browsing" capabilities. | 🟠 Evolving |
+| [**n8n-nodes-thordata**](https://github.com/Thordata/n8n-nodes-thordata) | n8n | Native n8n integration for Thordata SERP API workflows. | New |
 | [**thordata-rag-pipeline**](https://github.com/Thordata/thordata-rag-pipeline) | Vector DB | 🧠 End-to-end pipeline: Scrape -> Clean -> Chunk -> Embed. Optimized for RAG. | 🟠 Evolving |
 
 ### 🔹 Layer 3: Solutions / SEO (Specialized Scrapers & Guides)
